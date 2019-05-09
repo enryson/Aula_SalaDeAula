@@ -15,24 +15,50 @@ var q = document.getElementById('quit');
 // variavel com a quantidade de perguntas
 var tques = questions.length;
 // varaivel com o valor de acertos
-var score=0;
+var score = 0;
 // variavel contadora com a pegunta atual
-var quesindex=0;
+var quesindex = 0;
 
-function quit(){
-    quiz.style.display='none';
-    result.style.display='';
-    q.style.display="none";
-    var f = score/tques;
-    result.textContent="SCORE ="+f*100;    
+function quit() {
+    quiz.style.display = 'none';
+    result.style.display = '';
+    q.style.display = "none";
+    var f = score / tques;
+    result.textContent = "SCORE =" + f * 100;
 }
 
-function give_ques(quesindex){
-    ques.textContent=quesindex+1+". "+questions[quesindex][0];
-    opt1.textContent=questions[quesindex][1];
-	opt2.textContent=questions[quesindex][2];
-	opt3.textContent=questions[quesindex][3];
-	opt4.textContent=questions[quesindex][4];
-	 return;// body...
+function give_ques(quesindex) {
+    ques.textContent = quesindex + 1 + ". " + questions[quesindex][0];
+    opt1.textContent = questions[quesindex][1];
+    opt2.textContent = questions[quesindex][2];
+    opt3.textContent = questions[quesindex][3];
+    opt4.textContent = questions[quesindex][4];
+    return;// body...
+}
+give_ques(0);
 
+function nextques() {
+    var selected_ans = document.querySelector('input[type=radio]:checked');
+    if (!selected_ans) {
+        alert("SELECT AN OPTION");
+        return;
+    }
+    if (selected_ans.value == questions[quesindex][5]) {
+        score = score + 1;
+    }
+    selected_ans.checked = false;
+
+    quesindex++;
+    if (quesindex == tques - 1)
+        nextbutton.textContent = "Finish";
+    var f = score / tques;
+
+    if (quesindex == tques) {
+        q.style.display = 'none';
+        quiz.style.display = 'none';
+        result.style.display = '';
+        result.textContent = "SCORED:" + (f * 100).toFixed(2) + "%";
+        return;
+    }
+    give_ques(quesindex);
 }
