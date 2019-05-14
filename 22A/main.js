@@ -27,7 +27,39 @@ function quit(){
     result.textContent="SCORE ="+f*100;    
 }
 
-function give_ques(quesindex){
-    ques.textContent=quesindex+1+". "+questions[quesindex][0];
+function give_ques(quesindex) {
+    ques.textContent = quesindex + 1 + ". " + questions[quesindex][0];
+    opt1.textContent = questions[quesindex][1];
+    opt2.textContent = questions[quesindex][2];
+    opt3.textContent = questions[quesindex][3];
+    opt4.textContent = questions[quesindex][4];
+    return;// body...
+}
+give_ques(0);
 
+function nextques() {
+    var selected_ans = document.querySelector('input[type=radio]:checked');
+    if (!selected_ans) {
+        alert("você nao respondeu, favor marcar uma alternativa");
+        return;
+    }
+    if (selected_ans.value == questions[quesindex][5]) {
+        score = score + 1;
+    }
+    selected_ans.checked = false;
+    
+    quesindex++;
+    if (quesindex == tques - 1){
+        nextbutton.textContent = "Finish";
+    }
+    var f = score / tques;
+
+    if (quesindex == tques) {
+        q.style.display = 'none';
+        quiz.style.display = 'none';
+        result.style.display = '';
+        result.textContent = "SCORED:" + (f * 100).toFixed(2) + "%";
+        return;
+    }
+    give_ques(quesindex);
 }

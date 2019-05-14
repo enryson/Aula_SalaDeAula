@@ -1,14 +1,8 @@
 <?php
 include_once("config.php");
 
-
-$id = $_GET['id'];
-if (empty($id)) {
-	$id = '';
-	$name = '';
-	$age = '';
-	$email = '';
-}else{
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
 	$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
 
 	while ($res = mysqli_fetch_array($result)) {
@@ -17,8 +11,12 @@ if (empty($id)) {
 		$age = $res['age'];
 		$email = $res['email'];
 	}
+} else{
+	$id = '';
+	$name = '';
+	$age = '';
+	$email = '';
 }
-
 
 if (isset($_POST['add'])) {
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
@@ -44,7 +42,7 @@ if (isset($_POST['add'])) {
 	} else {
 		//updating the table
 		$id=null;
-		$result = mysqli_query($mysqli, "INSERT INTO pessoas VALUES('$id','$name','$age','$email')");
+		$result = mysqli_query($mysqli, "INSERT INTO users VALUES(null,'$name','$age','$email')");
 		//redirectig to the display page. In our case, it is index.php
 		header("Location: index.php");
 	}
