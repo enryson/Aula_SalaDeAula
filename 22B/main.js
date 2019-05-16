@@ -70,6 +70,10 @@ function nextques() {
     var f = score / tques;
 
     if (quesindex == tques) {
+        /*q.style.display = 'none';
+        quiz.style.display = 'none';
+        result.style.display = '';
+        result.textContent = "Sua pontuação foi de: " + (f * 100).toFixed(2) + "%";*/
         quit();
         return;
     }
