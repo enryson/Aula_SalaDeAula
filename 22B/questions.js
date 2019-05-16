@@ -1,28 +1,9 @@
 var questions = [
 
-    ["Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?Qual a melhor sala?",
-        "22B", "22A", "32A", "32B",
-        "", "", "", "", "",
+    ["(Uerj simulado 2018)  O tempo necessário para que um planeta do sistema solar execute uma volta completa em torno do Sol é um ano. Observe as informações na tabela:",
+        "73", "76", "79", "82","",
+        "img/ex1.jpg", "", "", "", "","",
         "2"
     ],
 
-    ["Qual a melhor sala?",
-        "22B", "22A", "32A", "32B",
-        "https://qcon-assets-production.s3.amazonaws.com/images/provas/51686/13.jpg",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "1"
-    ],
-
-    ["",
-        "", "", "", "",
-        "https://qcon-assets-production.s3.amazonaws.com/images/provas/51686/13.jpg",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "https://cdn.iconscout.com/icon/free/png-128/bootstrap-226077.png",
-        "1"
-    ]
 ]

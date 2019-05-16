@@ -9,12 +9,13 @@ var opt1 = document.getElementById("option1");
 var opt2 = document.getElementById("option2");
 var opt3 = document.getElementById("option3");
 var opt4 = document.getElementById("option4");
+var opt5 = document.getElementById("option5");
 //Variavel das imagens
 var imgAlt1 = document.getElementById("imgAlt1");
 var imgAlt2 = document.getElementById("imgAlt2");
 var imgAlt3 = document.getElementById("imgAlt3");
 var imgAlt4 = document.getElementById("imgAlt4");
-
+var imgAlt5 = document.getElementById("imgAlt5");
 // variavel resultado
 var res = document.getElementById("result");
 //botoes pra sair e proxima pergunta
@@ -42,12 +43,15 @@ function give_ques(quesindex) {
     opt2.textContent = questions[quesindex][2];
     opt3.textContent = questions[quesindex][3];
     opt4.textContent = questions[quesindex][4];
+    opt5.textContent = questions[quesindex][5];
+    
     //chama as imagens da questão
-    imgQuestion.src = questions[quesindex][5];
-    imgAlt1.src = questions[quesindex][6];
-    imgAlt2.src = questions[quesindex][7];
-    imgAlt3.src = questions[quesindex][8];
-    imgAlt4.src = questions[quesindex][9];
+    imgQuestion.src = questions[quesindex][6];
+    imgAlt1.src = questions[quesindex][7];
+    imgAlt2.src = questions[quesindex][8];
+    imgAlt3.src = questions[quesindex][9];
+    imgAlt4.src = questions[quesindex][10];
+    imgAlt5.src = questions[quesindex][11];
 
     return;
 }
@@ -59,7 +63,7 @@ function nextques() {
         alert("Marque uma Alternativa");
         return;
     }
-    if (selected_ans.value == questions[quesindex][10]) {
+    if (selected_ans.value == questions[quesindex][12]) {
         score = score + 1;
     }
     selected_ans.checked = false;

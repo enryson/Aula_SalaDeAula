@@ -16,10 +16,7 @@ body {
 
 .option,
 #imgQuestion {
-    position: relative;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #next,
