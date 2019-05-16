@@ -8,7 +8,7 @@
 	<?php
 	$i = 0;
 	while (true) {
-		if ($i == 10) break;
+		if ($i == 13) break;
 				echo ++$i ;
 		}		
 	?>
